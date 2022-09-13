@@ -1,13 +1,11 @@
 public class Main {
   public static void main(String[] args) {
 
-    Vector2 v1 = new Vector2(0f, 0f);
-    Vector2 v2 = new Vector2(1f, 1f);
+    Vector3 v1 = new Vector3(2f, 3f, 5f);
+    Vector3 v2 = new Vector3(7f, 4f, 2f);
+    Vector3 v3 = new Vector3(1f, 1f, 1f);
 
-    Vector3 v3 = Vector3.zero;
+    Debug.Log(Vector3.Subtract(v1, v2, v3));
 
-    double dist = Vector2.Distance(v1, v2);
-
-    System.out.println();
   }
 }
