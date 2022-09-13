@@ -32,6 +32,8 @@ public class Main {
 
       System.out.println("Deseja jogar novamente? (Y - Sim)");
       String answer = scan.nextLine();
+
+      scan.close();
       if (answer.equals("Y") == false) { break; }
     } while(true);
   }
