@@ -1,15 +1,8 @@
 public class Main {
   public static void main(String[] args) {
-    Coord3 v1 = Coord3.zero;
-    Coord3 v2 = new Coord3(1f, 1f, 2f);
-
+    Vector3 v1 = new Vector3(3f, 5f, 7f);
     Debug.Log(v1.magnitude);
-    Debug.Log(v2.magnitude);
-
-    Debug.Log("\n");
-
     Debug.Log(v1.normalized);
-    Debug.Log(v2.normalized);
   }
 
   public void Polygons() {
