@@ -14,6 +14,8 @@ public class Vector3 {
     this.magnitude = (float) Math.sqrt((this.x * this.x) + (this.y * this.y));
     if (this.magnitude > 1) {
       this.normalized = new Vector3(this.x / this.magnitude, this.y / this.magnitude, this.z / this.magnitude);
+    } else {
+      this.normalized = this;
     }
   }
 
@@ -31,6 +33,14 @@ public class Vector3 {
    */
   public static float Distance(Vector3 a, Vector3 b) {
     return (float) Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2) + Math.pow(b.z - a.z, 2));
+  }
+
+  public static Vector3 CrossProduct(Vector3 a, Vector3 b) {
+    return new Vector3((a.y * b.z) - (a.z * b.y), (a.z * b.x) - (a.x * b.z), (a.x * b.y) - (a.y * b.x));
+  }
+
+  public static float ScalarProduct(Vector3 a, Vector3 b) {
+    return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
   }
 
   public static Vector3 Add(Vector3... c) {
@@ -71,14 +81,6 @@ public class Vector3 {
     }
 
     return new Vector3(sum_x, sum_y, sum_z);
-  }
-
-  public static Vector3 DivisionByConst(Vector3 v, float n) {
-    return new Vector3(v.x / n, v.y / n, v.z / n);
-  }
-
-  public static Vector3 MultiplyByConst(Vector3 v, float n) {
-    return new Vector3((v.x * n), (v.y * n), (v.z * n));
   }
 
   @Override

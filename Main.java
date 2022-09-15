@@ -1,8 +1,11 @@
 public class Main {
   public static void main(String[] args) {
-    Vector3 v1 = new Vector3(3f, 5f, 7f);
-    Debug.Log(v1.magnitude);
-    Debug.Log(v1.normalized);
+    Vector3 v1 = new Vector3(1f, 0f, 0f);
+    Vector3 v2 = new Vector3(0f, 1f, 0f);
+
+    Debug.Log(Vector3.CrossProduct(v1, v2));
+    Debug.Log(Vector3.ScalarProduct(v1, v2));
+
   }
 
   public void Polygons() {
