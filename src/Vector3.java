@@ -1,3 +1,5 @@
+package src;
+
 public class Vector3 {
   public final float x, y, z;
   public float magnitude;
