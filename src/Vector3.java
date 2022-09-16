@@ -32,13 +32,6 @@ public class Vector3 {
   public static Vector3 zero = new Vector3(0f, 0f, 0f);
 
   /**
-   * Calculate the distance between Vector3 a and Vector3 b
-   */
-  public static float Distance(Vector3 a, Vector3 b) {
-    return (float) Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2) + Math.pow(b.z - a.z, 2));
-  }
-
-  /**
    * Calculate the cross product between Vector3 a and Vector3 b
    */
   public static Vector3 CrossProduct(Vector3 a, Vector3 b) {

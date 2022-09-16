@@ -21,11 +21,11 @@ class Circle extends Polygon {
   }
 
   public float Area() {
-    return (float) Geometry.pi * this.r * this.r;
+    return (float) Matha.pi * this.r * this.r;
   }
 
   public float Perimeter() {
-    return (float) (2 * Geometry.pi * this.r);
+    return (float) (2 * Matha.pi * this.r);
   }
 }
 
@@ -102,6 +102,6 @@ class Pentagon extends Polygon {
   }
 
   public float getApothem() {
-    return (float) (this.s / (2 * Math.tan(Geometry.pi / 5)));
+    return (float) (this.s / (2 * Math.tan(Matha.pi / 5)));
   }
 }

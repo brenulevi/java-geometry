@@ -1,11 +1,27 @@
 import src.Debug;
-import src.Vector3;
+import src.Matha;
+import src.StraightLine;
+import src.Vector2;
 
 public class Main {
   public static void main(String[] args) {
-    Vector3 v1 = new Vector3(0f, 1f, 2f);
-    Vector3 v2 = new Vector3(1f, 10f, 9f);
+    Vector2 v1 = new Vector2(0f, 1f);
+    Vector2 v2 = new Vector2(1f, 10f);
 
-    Debug.Log(Vector3.CrossProduct(v1, v2));
+    StraightLine line = new StraightLine(v1, v2);
+
+    float[][] m = new float[2][2];
+    for (int i = 0; i < 2; i++) {
+      for (int j = 0; j < 2; j++) {
+        if (i == j) {
+          m[i][j] = 2;
+        } else {
+          m[i][j] = 1;
+        }
+      }
+    }
+
+    Debug.Log(Matha.Det(m));
+
   }
 }
